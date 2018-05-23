@@ -157,15 +157,15 @@ internal class CloudSourceTabBarController: UITabBarController, CloudSourceDataS
 
     // MARK: - CloudSourceDataSource Protocol Functions
 
-    func cropIfNeeded(item: CloudItem) {
-        let imageData: Data = try! Data.init(contentsOf: URL.init(string: item.path)!)
+    func cropIfNeeded(response: [String: Any]) {
+        let imageData: Data = try! Data.init(contentsOf: URL.init(string: response["url"])!)
         let image = UIImage.init(data: imageData)!
         let cropViewController: CropViewController = CropViewController.init(image: image)
         cropViewController.delegate = self
         present(cropViewController, animated: true, completion: nil)
     }
     
-    func store(item: CloudItem) {
+    func store(item: CloudItem, crop: Bool=true) {
 
         var cancellableRequest: CancellableRequest? = nil
 
@@ -212,6 +212,10 @@ internal class CloudSourceTabBarController: UITabBarController, CloudSourceDataS
                 }
             }
 
+            if(crop) {
+                self.cropIfNeeded(response: response)
+            }
+            
             if let picker = self.navigationController as? PickerNavigationController {
                 picker.pickerDelegate?.pickerStoredFile(picker: picker, response: response)
             }
@@ -401,6 +405,6 @@ extension CloudSourceTabBarController: CropViewControllerDelegate {
         
         let newCloudItem: CloudItem = CloudItem.init(dictionary: ["path": imageFileURL.path])!
         
-        self.store(item: newCloudItem)
+        self.store(item: newCloudItem, crop: false)
     }
 }
