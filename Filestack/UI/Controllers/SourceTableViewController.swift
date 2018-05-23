@@ -47,7 +47,7 @@ internal class SourceTableViewController: UITableViewController {
 
             // Get available cloud sources from config, but discard "custom source" (if present)
             // We will add it later, only if it is actually enabled in the Developer Portal.
-            self.cloudSources = client.config.availableCloudSources.flatMap {
+            self.cloudSources = client.config.availableCloudSources.compactMap {
                 $0 == .customSource ? nil : $0
             }
 

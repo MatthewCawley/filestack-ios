@@ -9,6 +9,56 @@
 /* Begin PBXBuildFile section */
 		3456F09B20B5FDB900134006 /* CropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B3FFEA20A3C5EC0026323D /* CropViewController.framework */; };
 		3456F09E20B5FDD900134006 /* TOCropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B3FFE420A3C5EC0026323D /* TOCropViewController.framework */; };
+		3456F0A720B603EC00134006 /* UploadMonitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B77BD1FB45EF9000F3FAE /* UploadMonitorViewController.swift */; };
+		3456F0A820B603EC00134006 /* CloudRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A92F151FA0BE3F00FEB611 /* CloudRequest.swift */; };
+		3456F0A920B603EC00134006 /* CloudSourceDataSourceConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565CEFA1FBF50010043BFBB /* CloudSourceDataSourceConsumer.swift */; };
+		3456F0AA20B603EC00134006 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C47E831FB9F0DF009B8248 /* Scene.swift */; };
+		3456F0AB20B603EC00134006 /* CloudSourceDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E8D1961FBDA16700DC2111 /* CloudSourceDataSource.swift */; };
+		3456F0AC20B603EC00134006 /* UserDefaults+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565CEF61FBF3F400043BFBB /* UserDefaults+State.swift */; };
+		3456F0AD20B603EC00134006 /* ImagePickerUploadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568DCCF1F9DFD7300F29923 /* ImagePickerUploadController.swift */; };
+		3456F0AE20B603EC00134006 /* MultipartUpload+Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DEBA521FBAE63700A267E7 /* MultipartUpload+Cancellable.swift */; };
+		3456F0AF20B603EC00134006 /* SourceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4569C7841FB1B6C500DE990E /* SourceTableViewController.swift */; };
+		3456F0B020B603EC00134006 /* UIImage+HEIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E2B7B01FC2FEB500448ED2 /* UIImage+HEIC.swift */; };
+		3456F0B120B603EC00134006 /* BundleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455804A61F9F445F007C694C /* BundleInfo.swift */; };
+		3456F0B220B603EC00134006 /* CloudSourceTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E8D1A01FBDA21200DC2111 /* CloudSourceTabBarController.swift */; };
+		3456F0B320B603EC00134006 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455804A41F9F4420007C694C /* Constants.swift */; };
+		3456F0B420B603EC00134006 /* PrefetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A48C151FB311F000356BC6 /* PrefetchRequest.swift */; };
+		3456F0B520B603EC00134006 /* SessionManager+FilestackDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455804A91F9F448C007C694C /* SessionManager+FilestackDefault.swift */; };
+		3456F0B620B603EC00134006 /* Scene+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C47E7F1FB9F0C6009B8248 /* Scene+Defaults.swift */; };
+		3456F0B720B603EC00134006 /* ActivityIndicatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459ADA091FB9FB050087698A /* ActivityIndicatorTableViewCell.swift */; };
+		3456F0B820B603EC00134006 /* StoreRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4587330C1FA32B66002DAA9D /* StoreRequest.swift */; };
+		3456F0B920B603EC00134006 /* LocalSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4569C7A51FB1F85800DE990E /* LocalSource.swift */; };
+		3456F0BA20B603EC00134006 /* CancellableRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DEBA501FBAE61000A267E7 /* CancellableRequest.swift */; };
+		3456F0BB20B603EC00134006 /* ActivityIndicatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565CEF41FBEF5AE0043BFBB /* ActivityIndicatorCollectionViewCell.swift */; };
+		3456F0BC20B603EC00134006 /* Data+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A48C1F1FB317F100356BC6 /* Data+JSON.swift */; };
+		3456F0BD20B603EC00134006 /* CloudItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565CEF21FBEEC2F0043BFBB /* CloudItemCollectionViewCell.swift */; };
+		3456F0BE20B603EC00134006 /* Array+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C47E731FB9B3DC009B8248 /* Array+SafeIndex.swift */; };
+		3456F0BF20B603EC00134006 /* CloudProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452DCF6C1FA1E1E30033B75D /* CloudProvider.swift */; };
+		3456F0C020B603EC00134006 /* LogoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4500C5721FC46A9200B17485 /* LogoutRequest.swift */; };
+		3456F0C120B603EC00134006 /* CloudItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4546628D1FB6063F00260033 /* CloudItem.swift */; };
+		3456F0C220B603EC00134006 /* PickerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45786D5B1FB3202B00478545 /* PickerNavigationController.swift */; };
+		3456F0C320B603EC00134006 /* CloudItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CBF4881FBF6D7700891BBD /* CloudItemTableViewCell.swift */; };
+		3456F0C420B603EC00134006 /* UIImage+Squared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DEBA561FBB05F600A267E7 /* UIImage+Squared.swift */; };
+		3456F0C520B603EC00134006 /* CloudSourceCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565CEEC1FBEE5940043BFBB /* CloudSourceCollectionViewController.swift */; };
+		3456F0C620B603EC00134006 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454054731F98A30F00C12B2F /* Client.swift */; };
+		3456F0C720B603EC00134006 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DEBA541FBAF48000A267E7 /* Config.swift */; };
+		3456F0C820B603EC00134006 /* CloudSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4569C7A71FB1F86700DE990E /* CloudSource.swift */; };
+		3456F0C920B603EC00134006 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455804A11F9F43A7007C694C /* CloudService.swift */; };
+		3456F0CA20B603EC00134006 /* ImageURLExportPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B603D21FC5B88A006775BF /* ImageURLExportPreset.swift */; };
+		3456F0CB20B603EC00134006 /* Storyboard+Scenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C47E7D1FB9F08A009B8248 /* Storyboard+Scenes.swift */; };
+		3456F0CC20B603EC00134006 /* CellDescriptibleSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4569C7A31FB1F84500DE990E /* CellDescriptibleSource.swift */; };
+		3456F0CD20B603EC00134006 /* CloudSourceViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565CEF81FBF4FE60043BFBB /* CloudSourceViewType.swift */; };
+		3456F0CE20B603EC00134006 /* FolderListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A92F171FA0BE9600FEB611 /* FolderListRequest.swift */; };
+		3456F0CF20B603EC00134006 /* CloudSourceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454662821FB5BBEB00260033 /* CloudSourceTableViewController.swift */; };
+		3456F0D020B603EC00134006 /* DocumentPickerUploadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45648CC11FD15DD400281653 /* DocumentPickerUploadController.swift */; };
+		3456F0D220B603EC00134006 /* TOCropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B3FFE420A3C5EC0026323D /* TOCropViewController.framework */; };
+		3456F0D320B603EC00134006 /* CropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B3FFEA20A3C5EC0026323D /* CropViewController.framework */; };
+		3456F0D420B603EC00134006 /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C2D5021FD55C5600912749 /* ZipArchive.framework */; };
+		3456F0D520B603EC00134006 /* FilestackSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454157881FA7592000F37C9F /* FilestackSDK.framework */; };
+		3456F0D720B603EC00134006 /* Filestack.h in Headers */ = {isa = PBXBuildFile; fileRef = 457085021F975C6C00991340 /* Filestack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3456F0D920B603EC00134006 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4518BDF51FC6DE0400FB7D9D /* README.md */; };
+		3456F0DA20B603EC00134006 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4569C7871FB1C35600DE990E /* Icons.xcassets */; };
+		3456F0DB20B603EC00134006 /* Picker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4569C79C1FB1CFC000DE990E /* Picker.storyboard */; };
 		4500C5731FC46A9200B17485 /* LogoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4500C5721FC46A9200B17485 /* LogoutRequest.swift */; };
 		4518BDFE1FC6DE0400FB7D9D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4518BDF51FC6DE0400FB7D9D /* README.md */; };
 		452B77BE1FB45EF9000F3FAE /* UploadMonitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B77BD1FB45EF9000F3FAE /* UploadMonitorViewController.swift */; };
@@ -79,6 +129,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 144B8CC81D22CAFF0085D774;
 			remoteInfo = TOCropViewController;
+		};
+		3456F0A120B603EC00134006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 144B8CC81D22CAFF0085D774;
+			remoteInfo = TOCropViewController;
+		};
+		3456F0A320B603EC00134006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2238CF3B1FC029A90081B957;
+			remoteInfo = CropViewController;
+		};
+		3456F0A520B603EC00134006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4541577F1FA7591F00F37C9F /* FilestackSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 45B8309A1F03B27A0053742A;
+			remoteInfo = FilestackSDK;
 		};
 		34B3FFDF20A3C5EC0026323D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -244,6 +315,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3456F0E020B603EC00134006 /* FilestackLocal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FilestackLocal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3456F0E120B603ED00134006 /* Filestack copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Filestack copy-Info.plist"; path = "/Users/Matthew/Projects/TheCanvasWorks/MobileApp/newiOS/src/filestack/Filestack copy-Info.plist"; sourceTree = "<absolute>"; };
 		34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TOCropViewControllerExample.xcodeproj; path = Carthage/Checkouts/TOCropViewController/TOCropViewControllerExample.xcodeproj; sourceTree = "<group>"; };
 		4500C5721FC46A9200B17485 /* LogoutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequest.swift; sourceTree = "<group>"; };
 		4518BDF51FC6DE0400FB7D9D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -305,6 +378,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3456F0D120B603EC00134006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3456F0D220B603EC00134006 /* TOCropViewController.framework in Frameworks */,
+				3456F0D320B603EC00134006 /* CropViewController.framework in Frameworks */,
+				3456F0D420B603EC00134006 /* ZipArchive.framework in Frameworks */,
+				3456F0D520B603EC00134006 /* FilestackSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		457084FB1F975C6C00991340 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -508,6 +592,7 @@
 				4570850C1F975C6C00991340 /* FilestackTests */,
 				457965221F989F52004C570A /* Frameworks */,
 				457085001F975C6C00991340 /* Products */,
+				3456F0E120B603ED00134006 /* Filestack copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -516,6 +601,7 @@
 			children = (
 				457084FF1F975C6C00991340 /* Filestack.framework */,
 				457085081F975C6C00991340 /* FilestackTests.xctest */,
+				3456F0E020B603EC00134006 /* FilestackLocal.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -619,6 +705,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		3456F0D620B603EC00134006 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3456F0D720B603EC00134006 /* Filestack.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		457084FC1F975C6C00991340 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -630,6 +724,28 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3456F09F20B603EC00134006 /* FilestackLocal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3456F0DD20B603EC00134006 /* Build configuration list for PBXNativeTarget "FilestackLocal" */;
+			buildPhases = (
+				3456F0A620B603EC00134006 /* Sources */,
+				3456F0D120B603EC00134006 /* Frameworks */,
+				3456F0D620B603EC00134006 /* Headers */,
+				3456F0D820B603EC00134006 /* Resources */,
+				3456F0DC20B603EC00134006 /* Set Version and Build Number */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3456F0A020B603EC00134006 /* PBXTargetDependency */,
+				3456F0A220B603EC00134006 /* PBXTargetDependency */,
+				3456F0A420B603EC00134006 /* PBXTargetDependency */,
+			);
+			name = FilestackLocal;
+			productName = Filestack;
+			productReference = 3456F0E020B603EC00134006 /* FilestackLocal.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		457084FE1F975C6C00991340 /* Filestack */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 457085131F975C6C00991340 /* Build configuration list for PBXNativeTarget "Filestack" */;
@@ -681,6 +797,9 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Filestack;
 				TargetAttributes = {
+					3456F09F20B603EC00134006 = {
+						ProvisioningStyle = Automatic;
+					};
 					457084FE1F975C6C00991340 = {
 						CreatedOnToolsVersion = 9.0.1;
 						LastSwiftMigration = 0900;
@@ -725,6 +844,7 @@
 			targets = (
 				457084FE1F975C6C00991340 /* Filestack */,
 				457085071F975C6C00991340 /* FilestackTests */,
+				3456F09F20B603EC00134006 /* FilestackLocal */,
 			);
 		};
 /* End PBXProject section */
@@ -873,6 +993,16 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3456F0D820B603EC00134006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3456F0D920B603EC00134006 /* README.md in Resources */,
+				3456F0DA20B603EC00134006 /* Icons.xcassets in Resources */,
+				3456F0DB20B603EC00134006 /* Picker.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		457084FD1F975C6C00991340 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -895,6 +1025,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3456F0DC20B603EC00134006 /* Set Version and Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Set Version and Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bin/set-buildnumber.sh\n$SRCROOT/bin/set-version.sh";
+		};
 		452B6ADB1FA89A4F00FFD490 /* Set Version and Build Number */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -912,6 +1056,55 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3456F0A620B603EC00134006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3456F0A720B603EC00134006 /* UploadMonitorViewController.swift in Sources */,
+				3456F0A820B603EC00134006 /* CloudRequest.swift in Sources */,
+				3456F0A920B603EC00134006 /* CloudSourceDataSourceConsumer.swift in Sources */,
+				3456F0AA20B603EC00134006 /* Scene.swift in Sources */,
+				3456F0AB20B603EC00134006 /* CloudSourceDataSource.swift in Sources */,
+				3456F0AC20B603EC00134006 /* UserDefaults+State.swift in Sources */,
+				3456F0AD20B603EC00134006 /* ImagePickerUploadController.swift in Sources */,
+				3456F0AE20B603EC00134006 /* MultipartUpload+Cancellable.swift in Sources */,
+				3456F0AF20B603EC00134006 /* SourceTableViewController.swift in Sources */,
+				3456F0B020B603EC00134006 /* UIImage+HEIC.swift in Sources */,
+				3456F0B120B603EC00134006 /* BundleInfo.swift in Sources */,
+				3456F0B220B603EC00134006 /* CloudSourceTabBarController.swift in Sources */,
+				3456F0B320B603EC00134006 /* Constants.swift in Sources */,
+				3456F0B420B603EC00134006 /* PrefetchRequest.swift in Sources */,
+				3456F0B520B603EC00134006 /* SessionManager+FilestackDefault.swift in Sources */,
+				3456F0B620B603EC00134006 /* Scene+Defaults.swift in Sources */,
+				3456F0B720B603EC00134006 /* ActivityIndicatorTableViewCell.swift in Sources */,
+				3456F0B820B603EC00134006 /* StoreRequest.swift in Sources */,
+				3456F0B920B603EC00134006 /* LocalSource.swift in Sources */,
+				3456F0BA20B603EC00134006 /* CancellableRequest.swift in Sources */,
+				3456F0BB20B603EC00134006 /* ActivityIndicatorCollectionViewCell.swift in Sources */,
+				3456F0BC20B603EC00134006 /* Data+JSON.swift in Sources */,
+				3456F0BD20B603EC00134006 /* CloudItemCollectionViewCell.swift in Sources */,
+				3456F0BE20B603EC00134006 /* Array+SafeIndex.swift in Sources */,
+				3456F0BF20B603EC00134006 /* CloudProvider.swift in Sources */,
+				3456F0C020B603EC00134006 /* LogoutRequest.swift in Sources */,
+				3456F0C120B603EC00134006 /* CloudItem.swift in Sources */,
+				3456F0C220B603EC00134006 /* PickerNavigationController.swift in Sources */,
+				3456F0C320B603EC00134006 /* CloudItemTableViewCell.swift in Sources */,
+				3456F0C420B603EC00134006 /* UIImage+Squared.swift in Sources */,
+				3456F0C520B603EC00134006 /* CloudSourceCollectionViewController.swift in Sources */,
+				3456F0C620B603EC00134006 /* Client.swift in Sources */,
+				3456F0C720B603EC00134006 /* Config.swift in Sources */,
+				3456F0C820B603EC00134006 /* CloudSource.swift in Sources */,
+				3456F0C920B603EC00134006 /* CloudService.swift in Sources */,
+				3456F0CA20B603EC00134006 /* ImageURLExportPreset.swift in Sources */,
+				3456F0CB20B603EC00134006 /* Storyboard+Scenes.swift in Sources */,
+				3456F0CC20B603EC00134006 /* CellDescriptibleSource.swift in Sources */,
+				3456F0CD20B603EC00134006 /* CloudSourceViewType.swift in Sources */,
+				3456F0CE20B603EC00134006 /* FolderListRequest.swift in Sources */,
+				3456F0CF20B603EC00134006 /* CloudSourceTableViewController.swift in Sources */,
+				3456F0D020B603EC00134006 /* DocumentPickerUploadController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		457084FA1F975C6C00991340 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -983,6 +1176,21 @@
 			name = TOCropViewController;
 			targetProxy = 3456F09C20B5FDD300134006 /* PBXContainerItemProxy */;
 		};
+		3456F0A020B603EC00134006 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TOCropViewController;
+			targetProxy = 3456F0A120B603EC00134006 /* PBXContainerItemProxy */;
+		};
+		3456F0A220B603EC00134006 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CropViewController;
+			targetProxy = 3456F0A320B603EC00134006 /* PBXContainerItemProxy */;
+		};
+		3456F0A420B603EC00134006 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FilestackSDK;
+			targetProxy = 3456F0A520B603EC00134006 /* PBXContainerItemProxy */;
+		};
 		454157D41FA7593600F37C9F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FilestackSDK;
@@ -1001,6 +1209,56 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3456F0DE20B603EC00134006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Filestack copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LLVM_LTO = YES_THIN;
+				OTHER_SWIFT_FLAGS = "-DUseCarthage";
+				PRODUCT_BUNDLE_IDENTIFIER = com.filestack.Filestack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Carthage/Checkouts/TOCropViewController\"/**";
+			};
+			name = Debug;
+		};
+		3456F0DF20B603EC00134006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Filestack copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LLVM_LTO = YES_THIN;
+				OTHER_SWIFT_FLAGS = "-DUseCarthage";
+				PRODUCT_BUNDLE_IDENTIFIER = com.filestack.Filestack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Carthage/Checkouts/TOCropViewController\"/**";
+			};
+			name = Release;
+		};
 		457085111F975C6C00991340 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1142,7 +1400,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Carthage/Checkouts/TOCropViewController\"/**";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -1166,7 +1424,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Carthage/Checkouts/TOCropViewController\"/**";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -1201,6 +1459,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3456F0DD20B603EC00134006 /* Build configuration list for PBXNativeTarget "FilestackLocal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3456F0DE20B603EC00134006 /* Debug */,
+				3456F0DF20B603EC00134006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		457084F91F975C6B00991340 /* Build configuration list for PBXProject "Filestack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
