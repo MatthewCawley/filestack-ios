@@ -216,9 +216,10 @@ internal class CloudSourceTabBarController: UITabBarController, CloudSourceDataS
             if(crop) {
                 self.cropIfNeeded(response: response)
             }
-            
-            if let picker = self.navigationController as? PickerNavigationController {
-                picker.pickerDelegate?.pickerStoredFile(picker: picker, response: response)
+            else {
+                if let picker = self.navigationController as? PickerNavigationController {
+                    picker.pickerDelegate?.pickerStoredFile(picker: picker, response: response)
+                }
             }
         }
 
