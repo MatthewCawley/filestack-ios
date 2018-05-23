@@ -85,7 +85,7 @@ class CloudSourceCollectionViewController: UICollectionViewController, UICollect
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let layout: UICollectionViewFlowLayout = collectionViewLayout as! UICollectionViewFlowLayout
         let itemsPerRow: CGFloat = 3
-        let size = (collectionView.frame.size.width / itemsPerRow) - (layout.minimumInteritemSpacing * (itemsPerRow - 1)) - (layout.sectionInset.left + layout.sectionInset.right)
+        let size = (collectionView.frame.size.width / itemsPerRow) - (layout.minimumInteritemSpacing * (itemsPerRow - 1))
         return CGSize.init(width: size, height: size)
     }
     
