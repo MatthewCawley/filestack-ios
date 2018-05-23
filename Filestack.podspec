@@ -15,4 +15,5 @@ Pod::Spec.new do |spec|
   spec.dependency 'Alamofire', '~> 4.6'
   spec.dependency 'FilestackSDK', '~> 1.2.2'
   spec.dependency 'SSZipArchive', '~> 2.1'
+  spec.dependency 'CropViewController', '~> 2.3.6'
 end

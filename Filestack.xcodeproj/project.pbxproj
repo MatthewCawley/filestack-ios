@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34B3FFF220A3C6190026323D /* CropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B3FFEA20A3C5EC0026323D /* CropViewController.framework */; };
 		4500C5731FC46A9200B17485 /* LogoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4500C5721FC46A9200B17485 /* LogoutRequest.swift */; };
 		4518BDFE1FC6DE0400FB7D9D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4518BDF51FC6DE0400FB7D9D /* README.md */; };
 		452B77BE1FB45EF9000F3FAE /* UploadMonitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B77BD1FB45EF9000F3FAE /* UploadMonitorViewController.swift */; };
@@ -64,6 +65,55 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		34B3FFDF20A3C5EC0026323D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2234246A1ABBC0CD00BBC2B1;
+			remoteInfo = TOCropViewControllerExample;
+		};
+		34B3FFE120A3C5EC0026323D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 220611971B2E6777001A467B;
+			remoteInfo = TOCropViewControllerTests;
+		};
+		34B3FFE320A3C5EC0026323D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 144B8CC91D22CAFF0085D774;
+			remoteInfo = TOCropViewController;
+		};
+		34B3FFE520A3C5EC0026323D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F5062DC1F53E2D900AA9F14;
+			remoteInfo = "TOCropViewControllerExample-Extension";
+		};
+		34B3FFE720A3C5EC0026323D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2238CF201FC0269C0081B957;
+			remoteInfo = CropViewControllerExample;
+		};
+		34B3FFE920A3C5EC0026323D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2238CF3C1FC029A90081B957;
+			remoteInfo = CropViewController;
+		};
+		34B3FFF020A3C6110026323D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2238CF3B1FC029A90081B957;
+			remoteInfo = CropViewController;
+		};
 		454157871FA7592000F37C9F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4541577F1FA7591F00F37C9F /* FilestackSDK.xcodeproj */;
@@ -186,6 +236,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TOCropViewControllerExample.xcodeproj; path = Carthage/Checkouts/TOCropViewController/TOCropViewControllerExample.xcodeproj; sourceTree = "<group>"; };
 		4500C5721FC46A9200B17485 /* LogoutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequest.swift; sourceTree = "<group>"; };
 		4518BDF51FC6DE0400FB7D9D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		452B77BD1FB45EF9000F3FAE /* UploadMonitorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadMonitorViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +301,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34B3FFF220A3C6190026323D /* CropViewController.framework in Frameworks */,
 				45C2D5091FD55CC300912749 /* ZipArchive.framework in Frameworks */,
 				454157D51FA7593C00F37C9F /* FilestackSDK.framework in Frameworks */,
 			);
@@ -267,6 +319,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34B3FFCF20A3C5EC0026323D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34B3FFE020A3C5EC0026323D /* TOCropViewControllerExample.app */,
+				34B3FFE220A3C5EC0026323D /* TOCropViewControllerTests.xctest */,
+				34B3FFE420A3C5EC0026323D /* TOCropViewController.framework */,
+				34B3FFE620A3C5EC0026323D /* TOCropViewControllerExample-Extension.appex */,
+				34B3FFE820A3C5EC0026323D /* CropViewControllerExample.app */,
+				34B3FFEA20A3C5EC0026323D /* CropViewController.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		452B6AD21FA8860400FFD490 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +543,7 @@
 		45759E491FA7588F008B0C03 /* External Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */,
 				4541577F1FA7591F00F37C9F /* FilestackSDK.xcodeproj */,
 				454157B81FA7592F00F37C9F /* OHHTTPStubs.xcodeproj */,
 				45C2D4FA1FD55C5600912749 /* ZipArchive.xcodeproj */,
@@ -568,6 +634,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				34B3FFF120A3C6110026323D /* PBXTargetDependency */,
 				454157D41FA7593600F37C9F /* PBXTargetDependency */,
 			);
 			name = Filestack;
@@ -601,7 +668,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Filestack;
 				TargetAttributes = {
 					457084FE1F975C6C00991340 = {
@@ -636,6 +703,10 @@
 					ProjectRef = 454157B81FA7592F00F37C9F /* OHHTTPStubs.xcodeproj */;
 				},
 				{
+					ProductGroup = 34B3FFCF20A3C5EC0026323D /* Products */;
+					ProjectRef = 34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */;
+				},
+				{
 					ProductGroup = 45C2D4FB1FD55C5600912749 /* Products */;
 					ProjectRef = 45C2D4FA1FD55C5600912749 /* ZipArchive.xcodeproj */;
 				},
@@ -649,6 +720,48 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		34B3FFE020A3C5EC0026323D /* TOCropViewControllerExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TOCropViewControllerExample.app;
+			remoteRef = 34B3FFDF20A3C5EC0026323D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		34B3FFE220A3C5EC0026323D /* TOCropViewControllerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TOCropViewControllerTests.xctest;
+			remoteRef = 34B3FFE120A3C5EC0026323D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		34B3FFE420A3C5EC0026323D /* TOCropViewController.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TOCropViewController.framework;
+			remoteRef = 34B3FFE320A3C5EC0026323D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		34B3FFE620A3C5EC0026323D /* TOCropViewControllerExample-Extension.appex */ = {
+			isa = PBXReferenceProxy;
+			fileType = "wrapper.app-extension";
+			path = "TOCropViewControllerExample-Extension.appex";
+			remoteRef = 34B3FFE520A3C5EC0026323D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		34B3FFE820A3C5EC0026323D /* CropViewControllerExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CropViewControllerExample.app;
+			remoteRef = 34B3FFE720A3C5EC0026323D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		34B3FFEA20A3C5EC0026323D /* CropViewController.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CropViewController.framework;
+			remoteRef = 34B3FFE920A3C5EC0026323D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		454157881FA7592000F37C9F /* FilestackSDK.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -850,6 +963,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		34B3FFF120A3C6110026323D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CropViewController;
+			targetProxy = 34B3FFF020A3C6110026323D /* PBXContainerItemProxy */;
+		};
 		454157D41FA7593600F37C9F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FilestackSDK;
@@ -882,6 +1000,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -889,6 +1008,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -923,7 +1043,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -943,6 +1063,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -950,6 +1071,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -976,7 +1098,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1004,7 +1126,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1028,7 +1149,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.filestack.Filestack;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

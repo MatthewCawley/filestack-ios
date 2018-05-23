@@ -17,7 +17,7 @@ private extension String {
     static let activityIndicatorReuseIdentifier = "ActivityIndicatorCollectionViewCell"
 }
 
-class CloudSourceCollectionViewController: UICollectionViewController {
+class CloudSourceCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private weak var dataSource: (CloudSourceDataSource)!
     private var refreshControl: UIRefreshControl? = nil
@@ -82,6 +82,13 @@ class CloudSourceCollectionViewController: UICollectionViewController {
         }
     }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let layout: UICollectionViewFlowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+        let itemsPerRow: CGFloat = 3
+        let size = (collectionView.frame.size.width / itemsPerRow) - (layout.minimumInteritemSpacing * (itemsPerRow - 1)) - ((layout.sectionInset.left + layout.sectionInset.right) / itemsPerRow)
+        return CGSize.init(width: size, height: size)
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         var cell: UICollectionViewCell
@@ -104,7 +111,7 @@ class CloudSourceCollectionViewController: UICollectionViewController {
             guard let item = dataSource.items?[safe: UInt(indexPath.row)] else { return cell }
 
             // Configure the cell
-            cell.label.text = item.name
+//            cell.label.text = item.name
 
             guard let cachedImage = dataSource.thumbnailCache.object(forKey: item.thumbnailURL as NSURL) else {
                 // Use a placeholder until we get the real thumbnail
@@ -139,6 +146,7 @@ class CloudSourceCollectionViewController: UICollectionViewController {
         return cell
     }
 
+    
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
 
         if indexPath.row == dataSource.items?.count {
@@ -171,8 +179,7 @@ class CloudSourceCollectionViewController: UICollectionViewController {
 
         return true
     }
-
-
+    
     // MARK - Actions
 
     @IBAction func refresh(_ sender: Any) {
