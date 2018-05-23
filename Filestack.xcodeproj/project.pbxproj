@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34B3FFF220A3C6190026323D /* CropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B3FFEA20A3C5EC0026323D /* CropViewController.framework */; };
+		3456F09B20B5FDB900134006 /* CropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B3FFEA20A3C5EC0026323D /* CropViewController.framework */; };
+		3456F09E20B5FDD900134006 /* TOCropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B3FFE420A3C5EC0026323D /* TOCropViewController.framework */; };
 		4500C5731FC46A9200B17485 /* LogoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4500C5721FC46A9200B17485 /* LogoutRequest.swift */; };
 		4518BDFE1FC6DE0400FB7D9D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4518BDF51FC6DE0400FB7D9D /* README.md */; };
 		452B77BE1FB45EF9000F3FAE /* UploadMonitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B77BD1FB45EF9000F3FAE /* UploadMonitorViewController.swift */; };
@@ -65,6 +66,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3456F09920B5FDAE00134006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2238CF3B1FC029A90081B957;
+			remoteInfo = CropViewController;
+		};
+		3456F09C20B5FDD300134006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 144B8CC81D22CAFF0085D774;
+			remoteInfo = TOCropViewController;
+		};
 		34B3FFDF20A3C5EC0026323D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */;
@@ -105,13 +120,6 @@
 			containerPortal = 34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2238CF3C1FC029A90081B957;
-			remoteInfo = CropViewController;
-		};
-		34B3FFF020A3C6110026323D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 34B3FFCE20A3C5EC0026323D /* TOCropViewControllerExample.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2238CF3B1FC029A90081B957;
 			remoteInfo = CropViewController;
 		};
 		454157871FA7592000F37C9F /* PBXContainerItemProxy */ = {
@@ -301,7 +309,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34B3FFF220A3C6190026323D /* CropViewController.framework in Frameworks */,
+				3456F09E20B5FDD900134006 /* TOCropViewController.framework in Frameworks */,
+				3456F09B20B5FDB900134006 /* CropViewController.framework in Frameworks */,
 				45C2D5091FD55CC300912749 /* ZipArchive.framework in Frameworks */,
 				454157D51FA7593C00F37C9F /* FilestackSDK.framework in Frameworks */,
 			);
@@ -634,7 +643,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				34B3FFF120A3C6110026323D /* PBXTargetDependency */,
+				3456F09D20B5FDD300134006 /* PBXTargetDependency */,
+				3456F09A20B5FDAE00134006 /* PBXTargetDependency */,
 				454157D41FA7593600F37C9F /* PBXTargetDependency */,
 			);
 			name = Filestack;
@@ -963,10 +973,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		34B3FFF120A3C6110026323D /* PBXTargetDependency */ = {
+		3456F09A20B5FDAE00134006 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CropViewController;
-			targetProxy = 34B3FFF020A3C6110026323D /* PBXContainerItemProxy */;
+			targetProxy = 3456F09920B5FDAE00134006 /* PBXContainerItemProxy */;
+		};
+		3456F09D20B5FDD300134006 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TOCropViewController;
+			targetProxy = 3456F09C20B5FDD300134006 /* PBXContainerItemProxy */;
 		};
 		454157D41FA7593600F37C9F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1127,6 +1142,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Carthage/Checkouts/TOCropViewController\"/**";
 			};
 			name = Debug;
 		};
@@ -1150,6 +1166,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Carthage/Checkouts/TOCropViewController\"/**";
 			};
 			name = Release;
 		};

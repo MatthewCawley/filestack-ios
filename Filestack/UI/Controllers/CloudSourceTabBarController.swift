@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import FilestackSDK
+import CropViewController
 
 
 internal struct CloudSourceTabBarScene: Scene {
@@ -156,6 +157,14 @@ internal class CloudSourceTabBarController: UITabBarController, CloudSourceDataS
 
     // MARK: - CloudSourceDataSource Protocol Functions
 
+    func cropIfNeeded(item: CloudItem) {
+        let imageData: Data = try! Data.init(contentsOf: URL.init(string: item.path)!)
+        let image = UIImage.init(data: imageData)!
+        let cropViewController: CropViewController = CropViewController.init(image: image)
+        cropViewController.delegate = self
+        present(cropViewController, animated: true, completion: nil)
+    }
+    
     func store(item: CloudItem) {
 
         var cancellableRequest: CancellableRequest? = nil
@@ -378,5 +387,20 @@ internal class CloudSourceTabBarController: UITabBarController, CloudSourceDataS
                 self.navigationController?.popToRootViewController(animated: true)
             }
         }
+    }
+}
+
+extension CloudSourceTabBarController: CropViewControllerDelegate {
+    
+    func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+        let tmpDirectory = NSTemporaryDirectory()
+        let tmpFile = "\(tmpDirectory)/uploadImage.jpg"
+        let imageData: Data =  UIImageJPEGRepresentation(image, 1)!
+        let imageFileURL: URL = URL.init(fileURLWithPath: tmpFile)
+        try? imageData.write(to: imageFileURL)
+        
+        let newCloudItem: CloudItem = CloudItem.init(dictionary: ["path": imageFileURL.path])!
+        
+        self.store(item: newCloudItem)
     }
 }
