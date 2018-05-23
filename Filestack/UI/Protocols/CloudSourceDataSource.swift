@@ -20,9 +20,9 @@ protocol CloudSourceDataSource: class {
     var items: [CloudItem]? { get }
     var thumbnailCache: NSCache<NSURL, UIImage> { get }
 
-    func store(item: CloudItem)
-    func cropIfNeeded(response: [String: Any])
-    func navigate(to item: CloudItem, crop: Bool)
+    func store(item: CloudItem, crop: Bool)
+    func cropIfNeeded(response: StoreResponse)
+    func navigate(to item: CloudItem)
     func loadNextPage(completionHandler: @escaping (() -> Void))
     func refresh(completionHandler: @escaping (() -> Void))
     func cacheThumbnail(for item: CloudItem, completionHandler: @escaping ((UIImage) -> Void))

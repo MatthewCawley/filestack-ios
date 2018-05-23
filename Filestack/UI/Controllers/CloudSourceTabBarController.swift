@@ -38,6 +38,7 @@ internal struct CloudSourceTabBarScene: Scene {
 
 
 internal class CloudSourceTabBarController: UITabBarController, CloudSourceDataSource {
+        
 
     var client: Client!
     var storeOptions: StorageOptions!
@@ -157,8 +158,8 @@ internal class CloudSourceTabBarController: UITabBarController, CloudSourceDataS
 
     // MARK: - CloudSourceDataSource Protocol Functions
 
-    func cropIfNeeded(response: [String: Any]) {
-        let imageData: Data = try! Data.init(contentsOf: URL.init(string: response["url"])!)
+    func cropIfNeeded(response: StoreResponse) {
+        let imageData: Data = try! Data.init(contentsOf: URL.init(string: response.contents!["url"] as! String)!)
         let image = UIImage.init(data: imageData)!
         let cropViewController: CropViewController = CropViewController.init(image: image)
         cropViewController.delegate = self

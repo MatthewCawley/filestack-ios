@@ -163,7 +163,7 @@ class CloudSourceCollectionViewController: UICollectionViewController, UICollect
         if item.isFolder {
             dataSource.navigate(to: item)
         } else {
-            dataSource.store(item: item)
+            dataSource.store(item: item, crop: true)
         }
     }
 
