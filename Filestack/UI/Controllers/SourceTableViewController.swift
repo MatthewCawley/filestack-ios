@@ -146,7 +146,16 @@ internal class SourceTableViewController: UITableViewController {
 
         cell.accessoryType = .disclosureIndicator
         cell.imageView?.image = UIImage(named: source.iconName, in: Bundle(for: type(of: self)), compatibleWith: nil)
+        cell.imageView?.tintColor = #colorLiteral(red: 0.8901961446, green: 0.3058822751, blue: 0.2627450824, alpha: 1)
 
+        let itemSize = CGSize.init(width: 30, height: 30)
+        UIGraphicsBeginImageContextWithOptions(itemSize, false, UIScreen.main.scale);
+        let imageRect = CGRect.init(origin: CGPoint.zero, size: itemSize)
+        cell.imageView?.image!.draw(in: imageRect)
+        cell.imageView?.image! = UIGraphicsGetImageFromCurrentImageContext()!;
+        
+        UIGraphicsEndImageContext();
+        
         return cell
     }
 
