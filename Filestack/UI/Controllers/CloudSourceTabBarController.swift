@@ -220,7 +220,7 @@ internal class CloudSourceTabBarController: UITabBarController, CloudSourceDataS
         }
         
         
-        cancellableRequest = client.upload(from: url, completionHandler: completionHandler as! (NetworkJSONResponse?) -> Void)
+        cancellableRequest = client.upload(from: url, storeOptions: storeOptions, completionHandler: completionHandler as! (NetworkJSONResponse?) -> Void)
     }
     
     func store(item: CloudItem, crop: Bool=true) {
@@ -462,7 +462,7 @@ extension CloudSourceTabBarController: CropViewControllerDelegate {
         let imageFileURL: URL = URL.init(fileURLWithPath: tmpFile)
         try? imageData.write(to: imageFileURL)
         
-        self.uploadItem(url: imageFileURL)       
+        self.uploadItem(url: imageFileURL)
         
     }
 }
