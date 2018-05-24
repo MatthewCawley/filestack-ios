@@ -166,6 +166,63 @@ internal class CloudSourceTabBarController: UITabBarController, CloudSourceDataS
         present(cropViewController, animated: true, completion: nil)
     }
     
+    func uploadItem(url: URL) {
+        var cancellableRequest: CancellableRequest? = nil
+        
+        // Instantiate upload monitor controller
+        let scene = UploadMonitorScene(cancellableRequest: cancellableRequest)
+        
+        guard let uploadMonitorViewController = storyboard?.instantiateViewController(for: scene) else { return }
+        
+        self.uploadMonitorViewController = uploadMonitorViewController
+        
+        present(uploadMonitorViewController, animated: true) {
+            // Since we can not measure progress here, we will have to fake it.
+            // Set progress to 50% after 0.25 seconds
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                uploadMonitorViewController.updateProgress(value: 0.5)
+            }
+        }
+        
+        let completionHandler: ((NetworkJSONResponse) -> Void) = { (response) in
+            // Nil the reference to the request object, so it can be properly deallocated.
+            cancellableRequest = nil
+            
+            if let error = response.error {
+                let alert = UIAlertController(title: "Upload Failed",
+                                              message: error.localizedDescription,
+                                              preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                    // Dismiss monitor view controller, and remove strong reference to it
+                    uploadMonitorViewController.dismiss(animated: true) {
+                        self.uploadMonitorViewController = nil
+                    }
+                }))
+                
+                uploadMonitorViewController.present(alert, animated: true)
+            } else {
+                // Set progress to 100%
+                uploadMonitorViewController.updateProgress(value: 1.0)
+                // After 0.25 seconds, dismiss monitor view controller, and remove strong reference to it.
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                    uploadMonitorViewController.dismiss(animated: true) {
+                        self.uploadMonitorViewController = nil
+                    }
+                }
+            }
+            
+            if let picker = self.navigationController as? PickerNavigationController {
+                
+                let storeResponse = StoreResponse.init(contents: response.json, error: response.error)
+                picker.pickerDelegate?.pickerStoredFile(picker: picker, response: storeResponse)
+            }
+        }
+        
+        
+        cancellableRequest = client.upload(from: url, completionHandler: completionHandler as! (NetworkJSONResponse?) -> Void)
+    }
+    
     func store(item: CloudItem, crop: Bool=true) {
 
         var cancellableRequest: CancellableRequest? = nil
@@ -405,8 +462,8 @@ extension CloudSourceTabBarController: CropViewControllerDelegate {
         let imageFileURL: URL = URL.init(fileURLWithPath: tmpFile)
         try? imageData.write(to: imageFileURL)
         
-        let newCloudItem: CloudItem = CloudItem.init(dictionary: ["path": imageFileURL.path])!
+        let newCloudItem: CloudItem = CloudItem.init(dictionary: ["path": "\(imageFileURL)"])!
         
-        self.store(item: newCloudItem, crop: false)
+        
     }
 }
