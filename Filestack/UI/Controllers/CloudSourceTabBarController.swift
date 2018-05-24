@@ -209,14 +209,14 @@ internal class CloudSourceTabBarController: UITabBarController, CloudSourceDataS
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
                     uploadMonitorViewController.dismiss(animated: true) {
                         self.uploadMonitorViewController = nil
+                        if(crop) {
+                            self.cropIfNeeded(response: response)
+                        }
                     }
                 }
             }
 
-            if(crop) {
-                self.cropIfNeeded(response: response)
-            }
-            else {
+            if(!crop) {
                 if let picker = self.navigationController as? PickerNavigationController {
                     picker.pickerDelegate?.pickerStoredFile(picker: picker, response: response)
                 }
