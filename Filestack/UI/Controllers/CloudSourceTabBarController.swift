@@ -462,8 +462,12 @@ extension CloudSourceTabBarController: CropViewControllerDelegate {
         let imageFileURL: URL = URL.init(fileURLWithPath: tmpFile)
         try? imageData.write(to: imageFileURL)
         
+        
         cropViewController.dismiss(animated: true) {
-            self.uploadItem(url: imageFileURL)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                self.uploadItem(url: imageFileURL)
+            }
         }
     }
 }
