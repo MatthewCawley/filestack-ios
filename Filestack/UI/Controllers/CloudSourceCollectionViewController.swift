@@ -124,27 +124,31 @@ class CloudSourceCollectionViewController: UICollectionViewController, UICollect
             // Configure the cell
             if(item.isFolder) {
                 cell.label.text = item.name
-            }
-
-            guard let cachedImage = dataSource.thumbnailCache.object(forKey: item.thumbnailURL as NSURL) else {
-                // Use a placeholder until we get the real thumbnail
-                cell.imageView?.image = UIImage(named: "placeholder",
-                                                in: Bundle(for: type(of: self)),
-                                                compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+                cell.imageView.image = cell.imageView.image?.withRenderingMode(.alwaysTemplate)
                 cell.imageView?.tintColor = #colorLiteral(red: 0.8901961446, green: 0.3058822751, blue: 0.2627450824, alpha: 1)
-                
-                
-                dataSource.cacheThumbnail(for: item) { (image) in
-                    // Update the cell's thumbnail picture.
-                    // To find the right cell to update, first we try using collection view's `cellForItem(at:)`,
-                    // which may or not return a cell. If it doesn't, we use collection view's `reloadItems(at:)`
-                    // passing the index path for the cell.
-                    // We should never update the cell we returned moments earlier directly since it may, have been
-                    // reused to display a completely different item.
-                    if let cell = self.collectionView!.cellForItem(at: indexPath) as? CloudItemCollectionViewCell {
-                        cell.imageView?.image = image
-                    } else {
-                        self.collectionView!.reloadItems(at: [indexPath])
+            }
+            else
+            {
+                guard let cachedImage = dataSource.thumbnailCache.object(forKey: item.thumbnailURL as NSURL) else {
+                    // Use a placeholder until we get the real thumbnail
+                    cell.imageView?.image = UIImage(named: "placeholder",
+                                                    in: Bundle(for: type(of: self)),
+                                                    compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+                    cell.imageView?.tintColor = #colorLiteral(red: 0.8901961446, green: 0.3058822751, blue: 0.2627450824, alpha: 1)
+                    
+                    
+                    dataSource.cacheThumbnail(for: item) { (image) in
+                        // Update the cell's thumbnail picture.
+                        // To find the right cell to update, first we try using collection view's `cellForItem(at:)`,
+                        // which may or not return a cell. If it doesn't, we use collection view's `reloadItems(at:)`
+                        // passing the index path for the cell.
+                        // We should never update the cell we returned moments earlier directly since it may, have been
+                        // reused to display a completely different item.
+                        if let cell = self.collectionView!.cellForItem(at: indexPath) as? CloudItemCollectionViewCell {
+                            cell.imageView?.image = image
+                        } else {
+                            self.collectionView!.reloadItems(at: [indexPath])
+                        }
                     }
                 }
 
