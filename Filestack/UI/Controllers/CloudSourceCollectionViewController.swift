@@ -150,12 +150,12 @@ class CloudSourceCollectionViewController: UICollectionViewController, UICollect
                             self.collectionView!.reloadItems(at: [indexPath])
                         }
                     }
+                    return cell
                 }
 
-                
                 cell.imageView?.image = cachedImage
+                
             }
-            return cell
 
         default:
 
