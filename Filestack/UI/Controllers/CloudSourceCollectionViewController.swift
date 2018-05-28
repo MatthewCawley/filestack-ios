@@ -14,6 +14,7 @@ import FilestackSDK
 private extension String {
 
     static let cloudItemReuseIdentifier = "CloudItemCollectionViewCell"
+    static let cloudItemFolderReuseIdentifier = "CloudItemFolderCollectionViewCell"
     static let activityIndicatorReuseIdentifier = "ActivityIndicatorCollectionViewCell"
 }
 
@@ -92,15 +93,25 @@ class CloudSourceCollectionViewController: UICollectionViewController, UICollect
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         var cell: UICollectionViewCell
-
+        
         // If there's no items, or we are one past the item count, then dequeue an activity indicator cell,
         // else dequeue a regular cloud item cell.
         if dataSource.items == nil || (indexPath.row == dataSource.items?.count) {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: .activityIndicatorReuseIdentifier, for: indexPath)
+            
         } else {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: .cloudItemReuseIdentifier, for: indexPath)
+            let item = dataSource.items![safe: UInt(indexPath.row)]
+            
+            if(item?.isFolder)!
+            {
+                cell = collectionView.dequeueReusableCell(withReuseIdentifier: .cloudItemFolderReuseIdentifier, for: indexPath)
+            }
+            else
+            {
+                cell = collectionView.dequeueReusableCell(withReuseIdentifier: .cloudItemReuseIdentifier, for: indexPath)
+            }
         }
-    
+        
         switch cell {
         case let cell as ActivityIndicatorCollectionViewCell:
 
@@ -111,14 +122,18 @@ class CloudSourceCollectionViewController: UICollectionViewController, UICollect
             guard let item = dataSource.items?[safe: UInt(indexPath.row)] else { return cell }
 
             // Configure the cell
-//            cell.label.text = item.name
+            if(item.isFolder) {
+                cell.label.text = item.name
+            }
 
             guard let cachedImage = dataSource.thumbnailCache.object(forKey: item.thumbnailURL as NSURL) else {
                 // Use a placeholder until we get the real thumbnail
                 cell.imageView?.image = UIImage(named: "placeholder",
                                                 in: Bundle(for: type(of: self)),
-                                                compatibleWith: nil)
-
+                                                compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+                cell.imageView?.tintColor = #colorLiteral(red: 0.8901961446, green: 0.3058822751, blue: 0.2627450824, alpha: 1)
+                
+                
                 dataSource.cacheThumbnail(for: item) { (image) in
                     // Update the cell's thumbnail picture.
                     // To find the right cell to update, first we try using collection view's `cellForItem(at:)`,
