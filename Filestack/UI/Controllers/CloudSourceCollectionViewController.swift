@@ -152,10 +152,10 @@ class CloudSourceCollectionViewController: UICollectionViewController, UICollect
                     }
                 }
 
-                return cell
+                
+                cell.imageView?.image = cachedImage
             }
-
-            cell.imageView?.image = cachedImage
+            return cell
 
         default:
 
